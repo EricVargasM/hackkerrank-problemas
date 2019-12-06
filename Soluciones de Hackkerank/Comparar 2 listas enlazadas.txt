@@ -1,0 +1,16 @@
+  
+bool compare_lists(SinglyLinkedListNode* head1, SinglyLinkedListNode* head2) {
+    SinglyLinkedListNode *aux1=head1;
+    SinglyLinkedListNode *aux2=head2;
+ 
+while((aux1!=NULL&&aux2!=NULL)&&(aux1->data==aux2->data)){
+    aux1=aux1->next;
+    aux2=aux2->next;
+}
+if(aux1==NULL&&aux2==NULL){
+    return true;
+}
+else{
+    return false;
+}
+}

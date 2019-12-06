@@ -1,0 +1,14 @@
+SinglyLinkedListNode* reverse(SinglyLinkedListNode* head) {
+SinglyLinkedListNode* aux=head;
+SinglyLinkedListNode* head2=NULL;
+SinglyLinkedListNode*aux2;
+while(aux!=NULL){  
+   SinglyLinkedListNode* llist = (SinglyLinkedListNode*)malloc (sizeof   (SinglyLinkedListNode));
+    llist->data=aux->data;
+    aux=aux->next;
+    aux2=head2;
+    llist->next=aux2;
+    head2=llist;
+}
+return head2;
+}
